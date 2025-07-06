@@ -1,0 +1,17 @@
+EC2 :
+
+Amazon EC2 is a web service that provides resizable, secure virtual machines (called instances) in the AWS Cloud.
+You can think of EC2 as a computer in the cloud that you can use to host websites, run apps, store data, or run
+scripts — without buying physical hardware.
+
+⚙️ How EC2 Works:
+
+    You launch an EC2 instance (a virtual machine).
+
+    You choose the OS, size (CPU, RAM), and storage.
+
+    You connect to it using SSH (for Linux) or RDP (for Windows).
+
+    You install software, host applications, or store files.
+
+    You stop, start, scale, or delete the instance anytime.
