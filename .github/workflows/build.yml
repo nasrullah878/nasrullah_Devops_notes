@@ -1,0 +1,24 @@
+name: Build C++ Calculator
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install g++
+      run: sudo apt update && sudo apt install -y g++
+
+    - name: Build Calculator
+      run: g++ -o calculator calculator.cpp
+
+    - name: Run Calculator (test mode)
+      run: echo "+\n2\n3\noff" | ./calculator
