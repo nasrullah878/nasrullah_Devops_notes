@@ -15,7 +15,7 @@ int main() {
 
         switch (op) {
             case '+':
-                cout << "Enter two numbers: ";
+                cout << "Enter two numbers and me: ";
                 cin >> num1 >> num2;
                 cout << "Result: " << num1 + num2 << endl;
                 break;
