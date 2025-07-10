@@ -10,7 +10,7 @@ int main() {
         double num1, num2;
         char op;
 
-        cout << "\nEnter an operation (+, -, *, /, %, ^, r, !, e, p): ";
+        cout << "\nEnter and of  operation (+, -, *, /, %, ^, r, !, e, p): ";
         cin >> op;
 
         switch (op) {
