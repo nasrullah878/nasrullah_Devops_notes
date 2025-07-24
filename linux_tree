@@ -1,0 +1,9 @@
+[ Hardware ]
+     ↓
+[ Linux Kernel ]   ← Core of the OS, handles CPU, memory, devices
+     ↓
+[ Ubuntu System Services ]
+     ↓
+[ Shell / Terminal / Desktop GUI ]
+     ↓
+[ User Applications ]
