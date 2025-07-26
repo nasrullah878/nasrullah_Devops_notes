@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shoe Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+    }
+    header {
+      background: #343a40;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 2rem;
+    }
+    .shoe {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin: 1rem;
+      padding: 1rem;
+      width: 300px;
+      text-align: center;
+    }
+    .shoe img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .btn {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Shoe Paradise</h1>
+  </header>
+  <div class="container" id="shoe-container">
+    <!-- Shoes will be loaded here -->
+  </div>
+
+  <script>
+    // Simulated backend data
+    const shoes = [
+      {
+        id: 1,
+        name: "Running Shoes",
+        price: "$49.99",
+        image: "https://via.placeholder.com/300x200?text=Running+Shoes"
+      },
+      {
+        id: 2,
+        name: "Formal Shoes",
+        price: "$69.99",
+        image: "https://via.placeholder.com/300x200?text=Formal+Shoes"
+      },
+      {
+        id: 3,
+        name: "Sneakers",
+        price: "$59.99",
+        image: "https://via.placeholder.com/300x200?text=Sneakers"
+      }
+    ];
+
+    const container = document.getElementById('shoe-container');
+
+    // Render shoes on page
+    shoes.forEach(shoe => {
+      const shoeCard = document.createElement('div');
+      shoeCard.className = 'shoe';
+      shoeCard.innerHTML = `
+        <img src="${shoe.image}" alt="${shoe.name}" />
+        <h2>${shoe.name}</h2>
+        <p>${shoe.price}</p>
+        <button class="btn" onclick="buyShoe('${shoe.name}')">Buy Now</button>
+      `;
+      container.appendChild(shoeCard);
+    });
+
+    function buyShoe(name) {
+      alert(`You have selected: ${name}`);
+    }
+  </script>
+</body>
+</html>
