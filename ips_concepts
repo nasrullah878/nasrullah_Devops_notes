@@ -1,0 +1,61 @@
+🧠 What is NAT (Network Address Translation)?
+
+NAT is a function your router uses to let many devices (private IPs) share one public IP (given by your ISP) to access the internet.
+✅ Simple Example:
+🏠 In your home:
+Device	Private IP
+Laptop	192.168.1.2
+Phone	192.168.1.3
+Smart TV	192.168.1.4
+Router	192.168.1.1 (Gateway)
+Router Public IP	102.23.45.67 (from ISP)
+🌍 You open your phone and go to www.google.com
+
+Here’s what happens step by step:
+1. 📱 Your phone wants to talk to Google
+
+    It uses its private IP: 192.168.1.3
+
+    But Google can’t see private IPs — they are not routable on the internet.
+
+2. 🔄 Your router steps in (NAT)
+
+    The router changes the sender IP from 192.168.1.3 to 102.23.45.67 (its public IP)
+
+    It keeps a record in a table like:
+
+Source Private IP	Port	Translated to Public IP:Port
+192.168.1.3	55001	102.23.45.67:60001
+3. 🌐 The request goes to Google
+
+    Google sees it coming from 102.23.45.67
+
+    Google replies back to your router at 102.23.45.67
+
+4. 📬 Router gets the reply
+
+    Router checks the port in its NAT table.
+
+    It sees: “Oh, this was originally from 192.168.1.3 (your phone).”
+
+    Router sends the reply back to your phone at 192.168.1.3
+
+🎯 In short:
+
+    Devices inside your home use private IPs like 192.168.x.x
+
+    They can’t directly access the internet
+
+    Your router replaces the private IP with its public IP
+
+    It tracks who made the request
+
+    When replies come back, it sends them to the correct device
+
+🔐 Bonus: Why is NAT useful?
+
+    Saves public IPs (only one needed)
+
+    Adds basic security (outside world doesn’t see your device IPs)
+
+    Lets many devices use internet at once
