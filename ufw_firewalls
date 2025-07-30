@@ -1,0 +1,125 @@
+🔧 UFW Configuration & Management Commands
+
+# Enable / disable UFW
+sudo ufw enable
+sudo ufw disable
+
+# Reload rules
+sudo ufw reload
+
+# Reset all UFW rules
+sudo ufw reset
+
+🔐 Set Default Policies
+
+# Deny all incoming traffic by default
+sudo ufw default deny incoming
+
+# Allow all outgoing traffic by default
+sudo ufw default allow outgoing
+
+# Optional: deny all outgoing traffic (tight control)
+sudo ufw default deny outgoing
+
+✅ Allow / Deny Services and Ports
+
+# Allow SSH
+sudo ufw allow 22/tcp
+
+# Allow HTTP and HTTPS
+sudo ufw allow 80,443/tcp
+
+# Deny Telnet
+sudo ufw deny 23
+
+# Delete a rule
+sudo ufw delete allow 22/tcp
+
+🔒 Limit Connections & Control Responses
+
+# Protect against brute-force SSH
+sudo ufw limit 22/tcp
+
+# Reject (instead of silently drop) connection
+sudo ufw reject 3306
+
+🌐 Filter by IP, Subnet, Port, Protocol
+
+# Allow from specific IP
+sudo ufw allow from 203.0.113.5
+
+# Block a subnet
+sudo ufw deny from 10.0.0.0/8
+
+# Allow access to PostgreSQL only from LAN
+sudo ufw allow from 192.168.1.0/24 to any port 5432
+
+# Allow UDP access to VPN server
+sudo ufw allow proto udp from any to 172.16.0.10 port 1194
+
+🔁 Interface, Direction & Port Range Rules
+
+# Allow SMTP only on external interface
+sudo ufw allow in on eth0 to any port 25
+
+# Allow all outgoing traffic through VPN interface
+sudo ufw allow out on wg0 to any
+
+# Allow a port range
+sudo ufw allow 10000:10100/tcp
+
+📊 Viewing and Editing Rules
+
+# Show current rules
+sudo ufw status
+sudo ufw status numbered
+
+# Delete rule by number
+sudo ufw delete <rule_number>
+
+# Insert rule at specific position
+sudo ufw insert <number> allow from 1.2.3.4 to any port 22
+
+📁 Application Profiles
+
+# List all profiles
+sudo ufw app list
+
+# Get info on a specific profile
+sudo ufw app info "Apache Full"
+
+# Allow by app profile
+sudo ufw allow "Apache Full"
+
+🔍 Logging and Debugging
+
+# Turn logging on
+sudo ufw logging on
+
+# Set logging level (low, medium, high, full)
+sudo ufw logging high
+
+# View live firewall logs
+sudo tail -f /var/log/ufw.log
+
+# Dry-run a rule (no changes made)
+sudo ufw --dry-run allow 8080/tcp
+
+🌐 Advanced (NAT, IPv6, Raw iptables)
+
+# Enable IPv6 support
+sudo nano /etc/default/ufw   # set IPV6=yes
+
+# Edit advanced rules (pre/post processing)
+sudo nano /etc/ufw/before.rules
+sudo nano /etc/ufw/after.rules
+
+✅ Recommended UFW Starter Setup (Quick Copy-Paste)
+
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow OpenSSH
+sudo ufw limit 22/tcp
+sudo ufw allow 80,443/tcp
+sudo ufw enable
+sudo ufw status verbose
