@@ -1,3 +1,9 @@
 shah
-prometheus-2.51.1.linux-amd64
+# Ignore Prometheus binaries and archive
+prometheus-2.51.1.linux-amd64/prometheus
+prometheus-2.51.1.linux-amd64/promtool
 prometheus-2.51.1.linux-amd64.tar.gz
+
+# Optional: ignore the whole Prometheus folder
+# prometheus-2.51.1.linux-amd64/
+
