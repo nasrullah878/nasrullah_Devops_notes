@@ -1,3 +1,14 @@
+private or public ips 
+✅ Private IP Ranges (IPv4):
+Range	Notes
+10.0.0.0/8	10.0.0.0 – 10.255.255.255
+172.16.0.0/12	172.16.0.0 – 172.31.255.255
+192.168.0.0/16	192.168.0.0 – 192.168.255.255
+
+    ✅ These are the only private IP blocks. Everything else is public.
+
+
+
 🧠 What is NAT (Network Address Translation)?
 
 NAT is a function your router uses to let many devices (private IPs) share one public IP (given by your ISP) to access the internet.
