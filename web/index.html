@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Add User</title>
+</head>
+<body>
+  <h1>Add User1</h1>
+  <form id="userForm">
+    <label>Name: <input type="text" name="name" required /></label><br /><br />
+    <label>Password: <input type="password" name="password" required /></label><br /><br />
+    <label>Gmail: <input type="email" name="gmail" required /></label><br /><br />
+    <button type="submit">Add User</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script>
+    const form = document.getElementById('userForm');
+    const message = document.getElementById('message');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const data = {
+        name: formData.get('name'),
+        password: formData.get('password'),
+        gmail: formData.get('gmail')
+      };
+
+      try {
+        const res = await fetch('http://localhost:3000/users', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const result = await res.json();
+        if (res.ok) {
+          message.textContent = `Success! User ID: ${result.userId}`;
+          form.reset();
+        } else {
+          message.textContent = 'Error: ' + result.error;
+        }
+      } catch (err) {
+        message.textContent = 'Request failed';
+      }
+    });
+  </script>
+</body>
+</html>
