@@ -1,0 +1,14 @@
+---
+- name: Run tasks with initial delay
+  hosts: local
+  connection: local
+  tasks:
+    - name: Wait for 4 seconds before starting
+      pause:
+        seconds: 4
+
+    - name: Install Apache (example)
+      apt:
+        name: apache2
+        state: present
+      become: yes

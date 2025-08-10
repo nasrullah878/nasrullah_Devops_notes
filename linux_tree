@@ -7,3 +7,23 @@
 [ Shell / Terminal / Desktop GUI ]
      ↓
 [ User Applications ]
+
+
+
+
+
+0R
+Power on
+   ↓
+BIOS/UEFI
+   ↓
+Bootloader (GRUB)
+   ↓
+Linux Kernel
+   ↓
+systemd (init system)
+   ↓
+GDM (Login screen)
+   ↓
+GNOME Desktop (GUI)
+

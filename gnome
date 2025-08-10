@@ -1,0 +1,30 @@
+🖥️ What is GDM3?
+
+    GDM3 = GNOME Display Manager version 3
+
+    It is the login screen program — what you see when you turn on your computer and it asks for your username and password.
+
+    It manages user sessions and starts the desktop environment after login.
+
+    Think of it as the gatekeeper to your graphical desktop.
+
+🌐 What is GNOME?
+
+    GNOME is a full desktop environment — the actual graphical interface you use after logging in.
+
+    It includes the desktop, panels, file manager, apps, settings, and much more.
+
+    GNOME provides your working environment (windows, menus, wallpapers, etc.).
+
+🧩 How They Work Together
+
+    gdm3 shows the login screen
+
+    After you enter your credentials, gdm3 starts your GNOME desktop session
+
+    Once GNOME is running, you see the desktop interface, launch apps, etc.
+
+Analogy:
+Role	Analogy
+GDM3	The front door & security guard
+GNOME	The inside of your house, where you live and do your work
