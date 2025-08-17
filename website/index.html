@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nasrullah Khan — Portfolio</title>
+  <meta name="description" content="Linux admin & DevOps learner — Apache, MySQL, AWS, GitHub." />
+  <style>
+    :root{
+      --bg:#0f172a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --accent:#38bdf8; --chip:#1f2937;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,sans-serif;
+      color:var(--text); background:radial-gradient(1200px 600px at 80% -10%, #0ea5e9 0%, transparent 35%) , var(--bg);
+    }
+    .wrap{max-width:980px; margin:0 auto; padding:24px}
+    header{
+      display:grid; gap:12px; padding:36px 0 18px; border-bottom:1px solid #1f2937;
+    }
+    .name{font-size:clamp(28px,4vw,40px); font-weight:800; line-height:1.1}
+    .tag{color:var(--muted)}
+    .row{display:flex; flex-wrap:wrap; gap:16px; align-items:center}
+    .btn{
+      display:inline-block; padding:10px 14px; border-radius:12px; background:var(--accent);
+      color:#001018; font-weight:700; text-decoration:none; box-shadow:0 8px 30px rgba(56,189,248,.25);
+    }
+    .grid{
+      display:grid; gap:18px; grid-template-columns:repeat(12,1fr); margin-top:22px;
+    }
+    .card{
+      grid-column:span 12; background:color-mix(in oklab, var(--card), black 8%);
+      border:1px solid #1f2937; border-radius:18px; padding:18px;
+    }
+    @media(min-width:840px){
+      .span-8{grid-column:span 8}
+      .span-4{grid-column:span 4}
+      .span-6{grid-column:span 6}
+    }
+    h2{margin:0 0 8px; font-size:22px}
+    p{margin:6px 0 10px; color:var(--text)}
+    .muted{color:var(--muted)}
+    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .chip{
+      padding:6px 10px; border-radius:999px; background:var(--chip); border:1px solid #253042; font-size:13px;
+    }
+    .list{margin:0; padding-left:18px}
+    .kpi{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px}
+    .kpi div{background:#0b1220; border:1px solid #1f2937; border-radius:14px; padding:12px}
+    .kpi b{display:block; font-size:20px}
+    footer{margin:26px 0 10px; color:var(--muted); font-size:13px; text-align:center}
+    a{color:var(--accent)}
+    .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="name">Nasrullah Khan</div>
+      <div class="tag">Linux Administration • DevOps (AWS + GitHub) • Web Hosting (Apache/MySQL/PHP)</div>
+      <div class="row">
+        <a class="btn" href="mailto:you@example.com">Contact Me</a>
+        <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+        <span class="muted">Location: Pakistan</span>
+      </div>
+    </header>
+
+    <section class="grid">
+      <article class="card span-8">
+        <h2>About Me</h2>
+        <p>
+          I’m learning Linux administration and DevOps. I deploy static/dynamic websites, set up Apache,
+          manage MySQL users/permissions, and automate routine tasks. Currently experimenting with
+          AWS (EC2, S3, CloudFront) and a project named <span class="mono">my_app</span>.
+        </p>
+        <div class="chips">
+          <span class="chip">Ubuntu</span><span class="chip">Apache</span><span class="chip">MySQL</span>
+          <span class="chip">PHP</span><span class="chip">Bash</span><span class="chip">Git & GitHub</span>
+          <span class="chip">AWS EC2/S3/CloudFront</span>
+        </div>
+      </article>
+
+      <aside class="card span-4">
+        <h2>Quick Info</h2>
+        <div class="kpi">
+          <div><b>820 G3</b><span class="muted">HP EliteBook</span></div>
+          <div><b>Apache</b><span class="muted">localhost ready</span></div>
+          <div><b>MySQL</b><span class="muted">user & grants</span></div>
+          <div><b>AWS</b><span class="muted">deploy practice</span></div>
+        </div>
+      </aside>
+
+      <article class="card span-6">
+        <h2>Skills</h2>
+        <ul class="list">
+          <li>Linux admin: users/groups, permissions, processes, services</li>
+          <li>Web hosting: Apache virtual hosts, SSL, firewalls</li>
+          <li>Databases: MySQL users, grants, backups</li>
+          <li>Networking: SSH, SCP/rsync, basic firewall</li>
+          <li>Cloud: AWS EC2, S3 static hosting, CloudFront CDN</li>
+          <li>Automation: Bash scripting, cron jobs</li>
+        </ul>
+      </article>
+
+      <article class="card span-6">
+        <h2>Projects</h2>
+        <ul class="list">
+          <li><b>my_app</b> — practice app deployed via GitHub & AWS</li>
+          <li><b>Apache Host</b> — local site on <span class="mono">http://localhost</span> with custom <span class="mono">index.html</span></li>
+          <li><b>DB Admin</b> — MySQL user creation & privilege management</li>
+        </ul>
+      </article>
+
+      <article class="card span-12">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:you@example.com">you@example.com</a> · GitHub: <a href="https://github.com/your-username" target="_blank" rel="noopener">@your-username</a></p>
+      </article>
+    </section>
+
+    <footer>© <span id="y"></span> Nasrullah Khan</footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
