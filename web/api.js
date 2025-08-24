@@ -51,7 +51,7 @@ app.post('/users', (req, res) => {
   });
 });
 
-const PORT = 3000;
+const PORT = 3001;
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`API server running at http://0.0.0.0:${PORT}`);
 });
