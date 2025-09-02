@@ -1,0 +1,51 @@
+Step-by-step Guide
+🟢 1. Install required tools
+
+First, make sure you have the tools to build software from source:
+
+ and see lcation here :
+
+root@nasrullahkhan-laptop-HP-EliteBook-820-G3:~/ls_source/coreutils-9.4/src# ls
+backend_of_commands  expand.c            make-prime-list.c  single-binary.mk
+basename.c           expand-common.c     mkdir.c            sleep.c
+basenc.c             expand-common.h     mkfifo.c           sort.c
+blake2               expr.c              mknod.c            split.c
+cat.c                extract-magic       mktemp.c           stat.c
+chcon.c              factor.c            mv.c               statx.h
+chgrp.c              false.c             nice.c             stdbuf.c
+chmod.c              find-mount-point.c  nl.c               stty.c
+chown.c              find-mount-point.h  nohup.c            sum.c
+chown-core.c         fmt.c               nproc.c            sum.h
+chown-core.h         fold.c              numfmt.c           sync.c
+chroot.c             force-link.c        od.c               system.h
+cksum.c              force-link.h        operand2sig.c      tac.c
+cksum.h              fs.h                operand2sig.h      tac-pipe.c
+cksum_pclmul.c       fs-is-local.h       paste.c            tail.c
+comm.c               getlimits.c         pathchk.c          tee.c
+copy.c               group-list.c        pinky.c            temp-stream.c
+copy.h               group-list.h        pr.c               temp-stream.h
+coreutils-arch.c     groups.c            primes.h           test.c
+coreutils.c          head.c              printenv.c         timeout.c
+coreutils-dir.c      hostid.c            printf.c           touch.c
+coreutils-vdir.c     hostname.c          prog-fprintf.c     tr.c
+cp.c                 id.c                prog-fprintf.h     true.c
+cp-hash.c            install.c           ptx.c              truncate.c
+cp-hash.h            ioblksize.h         pwd.c              tsort.c
+crctab.c             iopoll.c            readlink.c         tty.c
+csplit.c             iopoll.h            realpath.c         uname-arch.c
+cu-progs.mk          join.c              relpath.c          uname.c
+cut.c                kill.c              relpath.h          uname.h
+date.c               lbracket.c          remove.c           uname-uname.c
+dcgen                libstdbuf.c         remove.h           unexpand.c
+dd.c                 link.c              rm.c               uniq.c
+df.c                 ln.c                rmdir.c            unlink.c
+digest.c             local.mk            runcon.c           uptime.c
+dircolors.c          logname.c           selinux.c          users.c
+dircolors.h          longlong.h          selinux.h          wc_avx2.c
+dircolors.hin        ls.c                seq.c              wc.c
+dirname.c            ls-dir.c            set-fields.c       whoami.c
+du.c                 ls.h                set-fields.h       who.c
+echo.c               ls-ls.c             shred.c            yes.c
+env.c                ls-vdir.c           shuf.c
+root@nasrullahkhan-laptop-HP-EliteBook-820-G3:~/ls_source/coreutils-9.4/src# 
+
